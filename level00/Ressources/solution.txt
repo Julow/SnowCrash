@@ -1,0 +1,27 @@
+
+level00@BornToSec:~$ find / -user flag00 2>/dev/null
+/bin/...
+/bin/.../flag
+/rofs/bin/...
+/rofs/bin/.../flag
+
+level00@BornToSec:~$ cat /bin/.../flag
+Not so fast.. (tips: I came, I saw, I conquered... )
+cdiiddwpgswtgt
+
+level00@BornToSec:~$ cat /rofs/bin/.../flag
+Not so fast.. (tips: I came, I saw, I conquered... )
+cdiiddwpgswtgt
+
+python -c '
+def caesar(s, n):
+  a = ord("a")
+  return "".join([chr(((ord(c) - a + n) % 26) + a) for c in s])
+
+for i in range(0, 26):
+  print "%d: %s" % (i, caesar("cdiiddwpgswtgt", i))
+'
+
+...
+11: nottoohardhere
+...
