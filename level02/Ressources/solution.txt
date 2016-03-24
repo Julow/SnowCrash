@@ -1,0 +1,20 @@
+
+tshark -r level02.pcap -T fields -e tcp -e data | python -c '
+import sys, string, re
+for l in sys.stdin:
+  tcp, s = l.split("\t")
+  m = re.search("Src Port: ([0-9]+)", tcp)
+  sys.stdout.write("%5s" % m.group(1) if m is not None else "?????")
+  sys.stdout.write(" --> ")
+  m = re.search("Dst Port: ([0-9]+)", tcp)
+  sys.stdout.write("%5s" % m.group(1) if m is not None else "?????")
+  sys.stdout.write(" ")
+  while len(s) >= 2:
+    c = chr(int(s[:2], 16))
+    if c in string.printable:
+      sys.stdout.write(c)
+    else:
+      sys.stdout.write("\\x%02x" % ord(c))
+    s = s[2:]
+  sys.stdout.write("\n")
+' > level02.log
