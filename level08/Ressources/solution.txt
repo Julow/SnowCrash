@@ -1,0 +1,11 @@
+
+cat token | python -c '
+import sys
+o = sys.stdout.write
+for l in sys.stdin:
+  i = 0
+  for c in l[:-1]:
+    o(chr(abs((ord(c) - i) % 256)))
+    i += 1
+  o("\n")
+'
