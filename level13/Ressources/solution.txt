@@ -1,0 +1,5 @@
+gdb ./level13
+b *0x804859a
+r
+p $eax = 4242
+c
