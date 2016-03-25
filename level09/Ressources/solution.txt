@@ -1,0 +1,2 @@
+ln -s `pwd`/token /tmp/lol
+./level09 /tmp/lol
